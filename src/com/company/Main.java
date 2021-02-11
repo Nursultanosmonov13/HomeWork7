@@ -5,21 +5,19 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Hero magic = new Magic();
-        String c = magic.applySuperAbility("SUPPER DAMAGE”");
-        Hero warrior = new Warrior();
-        String b = warrior.applySuperAbility("CRITICAL DAMAGE");
-        Medic medic = new Medic();
-        String a = medic.applySuperAbility("ПОЛНЫЙ ЖИЗНЬ");
-        //System.out.println(a);
-        String[] hero = new String[]{c,b,a};
-        for (int i = 0; i < hero.length; i++) {
-            System.out.println(hero[i]);
+        HavingSuperAbility[] havingSuperAbilities = {new Magic(), new Warrior(),new Medic()};
+       // System.out.println(havingSuperAbilities);
+        for (int i = 0; i < havingSuperAbilities.length ; i++) {
+            herAll(havingSuperAbilities[i]);
+
 
         }
 
+    }
+    public static void herAll(HavingSuperAbility havingSuperAbility){
 
-
+        System.out.println(havingSuperAbility.applySuperAbility(" CRITICAL DAMAGE"));
+       // System.out.println(havingSuperAbility.applySuperAbility("dd"));
     }
 
 }
